@@ -4,29 +4,31 @@
   "outputDirectory": "pitch",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
-  "routes": [
+  "functions": {
+    "api/manifest.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
     {
-      "src": "/manifest.json",
-      "dest": "/pitch/manifest.json",
-      "headers": {
-        "Content-Type": "application/json"
-      }
+      "source": "/manifest.json",
+      "destination": "/api/manifest"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/pitch/favicon.ico"
+      "source": "/favicon.ico",
+      "destination": "/pitch/favicon.ico"
     },
     {
-      "src": "/static/(.*)",
-      "dest": "/pitch/static/$1"
+      "source": "/static/(.*)",
+      "destination": "/pitch/static/$1"
     },
     {
-      "src": "/",
-      "dest": "/pitch/index.html"
+      "source": "/",
+      "destination": "/pitch/index.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/pitch/index.html"
+      "source": "/(.*)",
+      "destination": "/pitch/index.html"
     }
   ]
 }
