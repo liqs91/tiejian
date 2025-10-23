@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "buildCommand": "echo 'Using pre-built files'",
   "outputDirectory": "pitch",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "echo 'No install needed'",
   "framework": null,
-  "env": {
-    "NODE_OPTIONS": "--openssl-legacy-provider"
-  },
   "rewrites": [
     {
       "source": "/static/(.*)",
