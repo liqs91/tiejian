@@ -6,24 +6,16 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
-    },
-    {
-      "source": "/pitch/manifest.json",
-      "destination": "/pitch/manifest.json"
-    },
-    {
-      "source": "/pitch/favicon.ico",
-      "destination": "/pitch/favicon.ico"
-    },
-    {
       "source": "/manifest.json",
       "destination": "/pitch/manifest.json"
     },
     {
       "source": "/favicon.ico",
       "destination": "/pitch/favicon.ico"
+    },
+    {
+      "source": "/static/(.*)",
+      "destination": "/pitch/static/$1"
     },
     {
       "source": "/",
