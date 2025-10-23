@@ -1,16 +1,44 @@
 {
   "version": 2,
-  "buildCommand": "cp -r pitch/* . && cp pitch/.* . 2>/dev/null || true",
-  "outputDirectory": ".",
-  "installCommand": "echo 'No install needed'",
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "outputDirectory": "pitch",
+  "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
     {
       "source": "/service-api/(.*)",
       "destination": "http://110.40.176.144:8001/service-api/$1"
     },
     {
+      "source": "/static/(.*)",
+      "destination": "/pitch/static/$1"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/pitch/manifest.json"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/pitch/favicon.ico"
+    },
+    {
+      "source": "/favicon.svg",
+      "destination": "/pitch/favicon.svg"
+    },
+    {
+      "source": "/img/(.*)",
+      "destination": "/pitch/img/$1"
+    },
+    {
+      "source": "/json/(.*)",
+      "destination": "/pitch/json/$1"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/pitch/robots.txt"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/pitch/index.html"
     }
   ],
   "headers": [
