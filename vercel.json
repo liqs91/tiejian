@@ -4,11 +4,6 @@
   "outputDirectory": "pitch",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
-  "functions": {
-    "api/manifest.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/manifest.json",
