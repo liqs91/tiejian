@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "echo 'Using pre-built files'",
   "outputDirectory": "pitch",
   "installCommand": "echo 'No install needed'",
   "rewrites": [
