@@ -43,7 +43,7 @@ module.exports = {
   // 在哪些环境下显示高亮错误 ['development', 'production']
   errorLog: 'development',
   // 是否开启登录拦截
-  loginInterception: false,
+  loginInterception: true,
   // 是否开启登录RSA加密
   loginRSA: false,
   // intelligence(前端导出路由)和all(后端导出路由)两种方式
