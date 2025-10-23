@@ -9,6 +9,10 @@
   },
   "rewrites": [
     {
+      "source": "/static/(.*)",
+      "destination": "/pitch/static/$1"
+    },
+    {
       "source": "/pitch/(.*)",
       "destination": "/pitch/$1"
     },
