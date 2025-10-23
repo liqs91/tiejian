@@ -2,7 +2,7 @@
 node_modules
 node_modules.nosync
 /dist
-/pitch
+# /pitch
 
 # local env files
 .env.local
