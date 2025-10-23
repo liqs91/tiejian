@@ -3,6 +3,7 @@
   "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
   "outputDirectory": "pitch",
   "installCommand": "npm install --legacy-peer-deps",
+  "comment": "修复 OpenSSL 兼容性问题",
   "rewrites": [
     {
       "source": "/(.*)",
