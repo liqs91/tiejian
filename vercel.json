@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Using pre-built files from pitch directory'",
-  "outputDirectory": "pitch",
+  "buildCommand": "cp -r pitch/* . && cp pitch/.* . 2>/dev/null || true",
+  "outputDirectory": ".",
   "installCommand": "echo 'No install needed'",
   "rewrites": [
     {
@@ -9,28 +9,8 @@
       "destination": "http://110.40.176.144:8001/service-api/$1"
     },
     {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
-    },
-    {
-      "source": "/manifest.json",
-      "destination": "/pitch/manifest.json"
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/pitch/favicon.ico"
-    },
-    {
-      "source": "/favicon.svg",
-      "destination": "/pitch/favicon.svg"
-    },
-    {
-      "source": "/img/(.*)",
-      "destination": "/pitch/img/$1"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/pitch/index.html"
+      "destination": "/index.html"
     }
   ],
   "headers": [
