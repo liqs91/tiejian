@@ -13,12 +13,20 @@
       "destination": "http://110.40.176.144:8001/service-api/$1"
     },
     {
-      "source": "/",
-      "destination": "/pitch/index.html"
+      "source": "/manifest.json",
+      "destination": "/pitch/manifest.json"
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/pitch/favicon.ico"
     },
     {
       "source": "/static/(.*)",
       "destination": "/pitch/static/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/pitch/index.html"
     },
     {
       "source": "/(.*)",
