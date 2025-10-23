@@ -4,41 +4,29 @@
   "outputDirectory": "pitch",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
-  "headers": [
+  "routes": [
     {
-      "source": "/manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/manifest.json",
-      "destination": "/pitch/manifest.json"
+      "src": "/manifest.json",
+      "dest": "/pitch/manifest.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     },
     {
-      "source": "/favicon.ico",
-      "destination": "/pitch/favicon.ico"
+      "src": "/favicon.ico",
+      "dest": "/pitch/favicon.ico"
     },
     {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
+      "src": "/static/(.*)",
+      "dest": "/pitch/static/$1"
     },
     {
-      "source": "/",
-      "destination": "/pitch/index.html"
+      "src": "/",
+      "dest": "/pitch/index.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/pitch/index.html"
+      "src": "/(.*)",
+      "dest": "/pitch/index.html"
     }
   ]
 }
