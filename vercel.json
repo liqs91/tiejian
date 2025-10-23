@@ -22,7 +22,15 @@
       "destination": "/pitch/robots.txt"
     },
     {
-      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))$",
+      "source": "/(.*\\.js)$",
+      "destination": "/pitch/$1"
+    },
+    {
+      "source": "/(.*\\.css)$",
+      "destination": "/pitch/$1"
+    },
+    {
+      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))$",
       "destination": "/pitch/$1"
     },
     {
