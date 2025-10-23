@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "cp -r pitch/* . && cp pitch/.* . 2>/dev/null || true",
-  "outputDirectory": ".",
+  "buildCommand": "echo 'Using pre-built files from pitch directory'",
+  "outputDirectory": "pitch",
   "installCommand": "echo 'No install needed'",
   "rewrites": [
     {
