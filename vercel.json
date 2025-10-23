@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Using pre-built files'",
+  "buildCommand": "npm run build",
   "outputDirectory": "pitch",
-  "installCommand": "echo 'No install needed'",
+  "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
   "rewrites": [
     {
       "source": "/manifest.json",
