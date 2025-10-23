@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cp -r pitch .",
+  "buildCommand": "cp -r pitch/* . && cp pitch/.* . 2>/dev/null || true",
   "outputDirectory": ".",
   "installCommand": "echo 'No install needed'",
   "rewrites": [
