@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "outputDirectory": "pitch",
+  "installCommand": "npm install --legacy-peer-deps",
+  "rewrites": [
+    {
+      "source": "/service-api/(.*)",
+      "destination": "http://110.40.176.144:8001/service-api/$1"
+    },
+    {
+      "source": "/pitch/static/(.*)",
+      "destination": "/pitch/static/$1"
+    },
+    {
+      "source": "/pitch/manifest.json",
+      "destination": "/pitch/manifest.json"
+    },
+    {
+      "source": "/pitch/favicon.ico",
+      "destination": "/pitch/favicon.ico"
+    },
+    {
+      "source": "/pitch/favicon.svg",
+      "destination": "/pitch/favicon.svg"
+    },
+    {
+      "source": "/pitch/img/(.*)",
+      "destination": "/pitch/img/$1"
+    },
+    {
+      "source": "/pitch/json/(.*)",
+      "destination": "/pitch/json/$1"
+    },
+    {
+      "source": "/pitch/robots.txt",
+      "destination": "/pitch/robots.txt"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/pitch/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/pitch/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
