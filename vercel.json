@@ -5,6 +5,10 @@
   "installCommand": "echo 'No install needed'",
   "rewrites": [
     {
+      "source": "/service-api/(.*)",
+      "destination": "http://110.40.176.144:8001/service-api/$1"
+    },
+    {
       "source": "/static/(.*)",
       "destination": "/pitch/static/$1"
     },
