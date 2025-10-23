@@ -6,7 +6,7 @@ module.exports = {
   // hash模式时在不确定二级目录名称的情况下建议使用""代表相对路径或者"/二级目录/"
   // history模式默认使用"/"或者"/二级目录/"，记住只有hash时publicPath可以为空！！！
   // publicPath: process.env.NODE_ENV === 'development' ? '/pitch/' : '/pitch/',
-  publicPath: process.env.NODE_ENV === 'development' ? '/pitch' : '/pitch',
+  publicPath: process.env.NODE_ENV === 'development' ? '/pitch' : '/',
   // 生产环境构建文件的目录名
   outputDir: 'pitch',
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
