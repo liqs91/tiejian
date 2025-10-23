@@ -9,20 +9,8 @@
   },
   "rewrites": [
     {
-      "source": "/service-api/(.*)",
-      "destination": "http://110.40.176.144:8001/service-api/$1"
-    },
-    {
-      "source": "/manifest.json",
-      "destination": "/pitch/manifest.json"
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/pitch/favicon.ico"
-    },
-    {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
+      "source": "/pitch/(.*)",
+      "destination": "/pitch/$1"
     },
     {
       "source": "/",
