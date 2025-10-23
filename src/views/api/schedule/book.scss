@@ -1,0 +1,317 @@
+.book{
+  .calendar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    // 左
+   /* .calendar-title-box{
+      width: 120px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background: #e6f2ff;
+      >div:nth-child(1){
+        width: 120px;
+        height: 100px;
+        background: $base-color-blue;
+        p{
+          color: #fff;
+          font-size: 24px;
+          text-align: center;
+          line-height: 80px;
+        }
+      }
+      >div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        .calMonth{
+          width: 100%;
+          height: 51.667px;
+          line-height: 51.667px;
+          font-size: 14px;
+          color: #666;
+          cursor: pointer;
+          text-align: center;
+
+          .calMA{
+            width: 100px;
+            height: 22px;
+            margin-left: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            padding-left: 23px;
+            .calMB{
+              width: 35px;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              transform:translateY(-6px);
+              p{
+                text-align: center;
+                line-height: 35px
+              }
+            }
+          }
+          .calMC{
+            //width: 100px;
+            height: 22px;
+            margin-left: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            padding-left: 23px;
+            background: rgb(177, 215, 255);
+            .calMD{
+              background: #2d8cf0;
+              color: #fff;
+              font-size: 18px;
+              width: 35px;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              transform:translateY(-6px);
+              p{
+                text-align: center;
+                line-height: 35px
+              }
+            }
+          }
+        }
+      }
+    }
+
+*/
+    // 右
+    .calendar-body-box{
+      width: 100%;
+      .calendar-table{
+        border-collapse: collapse;
+        width: 100%;
+        // 右上
+        .calendar-table-th{
+          height: 33px;
+          line-height: 33px;
+          color:#333;
+          background: #eee
+        }
+        // 右下
+        .calendar-main-th{
+          height: 110px;
+          text-align: right;
+          td{
+            border: 1px solid #eee;
+            width: 14.286%;
+            .calendar-num{
+              height: 30px;
+              padding-right: 10px;
+              line-height: 30px;
+              font-size: 18px;
+              color: #888
+            }
+            .calendar-route{
+              height: 80px;
+              font-size: 14px;
+              cursor: pointer;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              .calendarBlue{
+                color: #2d8cf0;
+                >span{
+                  background: rgba(171,216,255,.7);
+                  border-left: 3px solid #2d8cf0;
+                }
+              }
+              .calendarRed{
+                color: #f00;
+                >span{
+                  background: rgba(255,201,202,.8);
+                  border-left: 3px solid #f00;
+                }
+              }
+              .calendarInfo{
+                color: #909399;
+                >span{
+                  background: rgba(233,233,235,.8);
+                  border-left: 3px solid #909399;
+                }
+              }
+              .calendarWarning{
+                color: #E6A23C;
+                >span{
+                  background: rgba(250,236,216,.8);
+                  border-left: 3px solid #E6A23C;
+                }
+              }
+              .calendarSuccess{
+                color: #67C23A;
+                >span{
+                  background: rgba(225,243,216,.8);
+                  border-left: 3px solid #67C23A;
+                }
+              }
+              .calendarBlue ,.calendarRed,.calendarInfo,.calendarWarning,.calendarSuccess{
+                >span{
+                  display: block;
+                  width: 100%;
+                  display: block;
+                  height: 20px;
+                  line-height: 20px;
+                  margin: 1px 0;
+                  >span{
+                    width: 100%;
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.calendar-table tr td:hover{
+  background-color: #e6f2ff;
+  transition: all .3s ease-in-out;
+}
+.contBlue{
+  width: 100%;
+  height: 100%;
+  color: #888;
+  .popTitle{
+    color: #2d8cf0;
+    font-size: 16px;
+  }
+  .popCont{
+    line-height: 10px;
+    .num{
+      font-size: 16px;
+      color: #2d8cf0
+    }
+  }
+}
+.contRed{
+  width: 100%;
+  height: 100%;
+  color: #888;
+  .popTitle{
+    color: #f00;
+    font-size: 16px;
+  }
+  .popCont{
+    line-height: 10px;
+    .num{
+      font-size: 16px;
+      color: #f00
+    }
+  }
+}
+.contInfo{
+  width: 100%;
+  height: 100%;
+  color: #888;
+  .popTitle{
+    color: #909399;
+    font-size: 16px;
+  }
+  .popCont{
+    line-height: 10px;
+    .num{
+      font-size: 16px;
+      color: #909399
+    }
+  }
+}
+.contWarning{
+  width: 100%;
+  height: 100%;
+  color: #888;
+  .popTitle{
+    color: #E6A23C;
+    font-size: 16px;
+  }
+  .popCont{
+    line-height: 10px;
+    .num{
+      font-size: 16px;
+      color: #E6A23C
+    }
+  }
+}
+.contSuccess{
+  width: 100%;
+  height: 100%;
+  color: #888;
+  .popTitle{
+    color: #67C23A;
+    font-size: 16px;
+  }
+  .popCont{
+    line-height: 10px;
+    .num{
+      font-size: 16px;
+      color: #67C23A
+    }
+  }
+}
+
+
+.titleClass{
+  display: flex;
+  justify-content: flex-end; /* 这会使子元素靠右对齐 */
+}
+
+.flagInfo {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: #E9E9EBCC;
+  margin: 7px 20px;
+}
+
+.flagBlue {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: #ABD8FFB2;
+  margin: 7px 20px;
+}
+
+.flagWarning {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: #FAECD8CC;
+  margin: 7px 20px;
+}
+
+.flagRed {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: #FFC9CACC;
+  margin: 7px 20px;
+}
+
+.flagGreen {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  background: #E1F3D8CC;
+  margin: 7px 20px;
+}
+
+
