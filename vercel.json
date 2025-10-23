@@ -6,12 +6,24 @@
   "framework": null,
   "rewrites": [
     {
+      "source": "/static/(.*)",
+      "destination": "/pitch/static/$1"
+    },
+    {
       "source": "/favicon.ico",
       "destination": "/pitch/favicon.ico"
     },
     {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
+      "source": "/favicon.svg",
+      "destination": "/pitch/favicon.svg"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/pitch/robots.txt"
+    },
+    {
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))$",
+      "destination": "/pitch/$1"
     },
     {
       "source": "/",
