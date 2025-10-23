@@ -1,45 +1,18 @@
 {
   "version": 2,
-  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
-  "outputDirectory": "pitch",
-  "installCommand": "npm install --legacy-peer-deps",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/static/(.*)",
-      "destination": "/pitch/static/$1"
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/pitch/favicon.ico"
-    },
-    {
-      "source": "/favicon.svg",
-      "destination": "/pitch/favicon.svg"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/pitch/robots.txt"
-    },
-    {
-      "source": "/(.*\\.js)$",
-      "destination": "/pitch/$1"
-    },
-    {
-      "source": "/(.*\\.css)$",
-      "destination": "/pitch/$1"
-    },
-    {
-      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))$",
-      "destination": "/pitch/$1"
-    },
-    {
-      "source": "/",
-      "destination": "/pitch/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/pitch/index.html"
-    }
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/static/(.*)", "dest": "/pitch/static/$1" },
+    { "src": "/favicon.ico", "dest": "/pitch/favicon.ico" },
+    { "src": "/favicon.svg", "dest": "/pitch/favicon.svg" },
+    { "src": "/robots.txt", "dest": "/pitch/robots.txt" },
+    { "src": "/(.*\\.js)$", "dest": "/pitch/$1" },
+    { "src": "/(.*\\.css)$", "dest": "/pitch/$1" },
+    { "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))$", "dest": "/pitch/$1" },
+    { "src": "/.*", "dest": "/pitch/index.html" },
+    { "src": "/(.*)", "dest": "/pitch/$1" }
   ]
 }
